@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#111210; color:#f2f1ec; --nav-bg:#111210; --nav-rule:#2c2e28; --nav-ink:#f2f1ec; --nav-dim:#9a9c90; font-family:"Libre Franklin", system-ui, sans-serif; -webkit-font-smoothing:antialiased; }
+  h1,h2,h3,p { margin:0; }
+  a { color:#dfe3d6; }
+  a:hover { color:#ffffff; }
+  ::selection { background:#33352a; }
+  :focus-visible { outline:2px solid #dfe3d6; outline-offset:3px; }
+</style>
+</helmet>
+
+<div style="background:#111210;min-height:100vh;display:flex;flex-direction:column">
+  <dc-import name="Nav" current="contact" hint-size="100%,60px"></dc-import>
+
+  <section style="max-width:1200px;margin:0 auto;padding:88px 32px 96px;width:100%;flex:1">
+    <div style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#8d8f83;margin-bottom:20px">Contact</div>
+    <h1 style="font-size:clamp(28px,4vw,46px);font-weight:300;line-height:1.16;letter-spacing:-0.01em;max-width:760px;text-wrap:pretty">Based in London. Open to conversations on urban analytics, spatial ML and digital twins.</h1>
+
+    <div style="border-top:1px solid #2c2e28;margin-top:56px;padding-top:36px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:40px">
+      <div>
+        <div style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#8d8f83;margin-bottom:12px">Email</div>
+        <a href="mailto:ndesai@aretian.com" style="font-size:19px;font-weight:300;text-decoration:none;border-bottom:1px solid #4d4f46;padding-bottom:3px">ndesai@aretian.com</a>
+      </div>
+      <div>
+        <div style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#8d8f83;margin-bottom:12px">Elsewhere</div>
+        <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-start">
+          <a href="https://www.linkedin.com/in/nikhildesai4/" target="_blank" rel="noopener" style="font-size:16px;font-weight:300;text-decoration:none;border-bottom:1px solid #4d4f46;padding-bottom:2px">LinkedIn</a>
+          <a href="https://github.com/NikhilSDesai" target="_blank" rel="noopener" style="font-size:16px;font-weight:300;text-decoration:none;border-bottom:1px solid #4d4f46;padding-bottom:2px">GitHub</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#8d8f83;margin-bottom:12px">Curriculum Vitae</div>
+        <a href="assets/NikhilDesaiResume.pdf" target="_blank" rel="noopener" style="display:inline-block;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;border:1px solid #6f7166;padding:13px 30px">Download CV</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="max-width:1200px;margin:0 auto;padding:32px;width:100%;border-top:1px solid #2c2e28;font-size:13px;color:#8d8f83">Nikhil Desai &middot; London</footer>
+</div>
+</x-dc>
+</body>
+</html>

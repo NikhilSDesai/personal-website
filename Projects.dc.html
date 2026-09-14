@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#111210; color:#f2f1ec; --nav-bg:#111210; --nav-rule:#2c2e28; --nav-ink:#f2f1ec; --nav-dim:#9a9c90; font-family:"Libre Franklin", system-ui, sans-serif; -webkit-font-smoothing:antialiased; }
+  h1,h2,h3,p { margin:0; }
+  a { color:#dfe3d6; }
+  a:hover { color:#ffffff; }
+  ::selection { background:#33352a; }
+  :focus-visible { outline:2px solid #dfe3d6; outline-offset:3px; }
+</style>
+</helmet>
+
+<div style="background:#111210;min-height:100vh">
+  <dc-import name="Nav" current="projects" hint-size="100%,60px"></dc-import>
+
+  <header style="max-width:1200px;margin:0 auto;padding:88px 32px 56px">
+    <div style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#8d8f83;margin-bottom:20px">Projects</div>
+    <h1 style="font-size:clamp(28px,4vw,46px);font-weight:300;line-height:1.16;letter-spacing:-0.01em;max-width:820px;text-wrap:pretty">Digital twins, spatial machine learning and network analysis, from live platforms to research.</h1>
+  </header>
+
+  <section style="max-width:1200px;margin:0 auto;padding:0 32px 96px">
+    <sc-for list="{{ projects }}" as="p" hint-placeholder-count="6">
+      <div style="border-top:1px solid #2c2e28;padding:36px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px;align-items:start">
+        <div style="width:100%;aspect-ratio:16/10;overflow:hidden;background:#23241f">
+          <img src="{{ p.src }}" alt="{{ p.title }}" style="width:100%;height:100%;object-fit:cover;display:block">
+        </div>
+        <div style="max-width:560px">
+          <div style="font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#8d8f83">{{ p.kicker }}</div>
+          <h2 style="font-size:clamp(20px,2vw,27px);font-weight:300;line-height:1.26;margin-top:10px;text-wrap:pretty">{{ p.title }}</h2>
+          <p style="font-size:16px;font-weight:300;line-height:1.66;color:#c2c4b8;margin-top:14px;text-wrap:pretty">{{ p.description }}</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:18px">
+            <sc-for list="{{ p.tags }}" as="tag" hint-placeholder-count="2">
+              <span style="border:1px solid #4d4f46;padding:6px 14px;font-size:12px;color:#a8aa9e">{{ tag }}</span>
+            </sc-for>
+          </div>
+          <a href="{{ p.link }}" target="_blank" rel="noopener" style="display:inline-block;margin-top:20px;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid #4d4f46;padding-bottom:4px">{{ p.cta }}</a>
+        </div>
+      </div>
+    </sc-for>
+
+    <div style="border-top:1px solid #2c2e28;padding:36px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px">
+      <div style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#8d8f83">More projects</div>
+      <div style="display:flex;flex-direction:column;gap:28px;max-width:620px">
+        <sc-for list="{{ moreProjects }}" as="proj" hint-placeholder-count="1">
+          <div>
+            <div style="font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#8d8f83">{{ proj.kicker }}</div>
+            <div style="font-size:19px;font-weight:300;margin-top:8px">{{ proj.title }}</div>
+            <p style="font-size:16px;font-weight:300;line-height:1.66;color:#c2c4b8;margin-top:8px;text-wrap:pretty">{{ proj.description }}</p>
+            <a href="{{ proj.link }}" target="_blank" rel="noopener" style="display:inline-block;margin-top:14px;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid #4d4f46;padding-bottom:4px">View on GitHub</a>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top:1px solid #2c2e28">
+    <div style="max-width:1200px;margin:0 auto;padding:88px 32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:48px;align-items:end">
+      <h2 style="font-size:clamp(26px,3vw,38px);font-weight:300;line-height:1.2;letter-spacing:-0.01em;max-width:600px;text-wrap:pretty">Working on cities, climate or spatial data? Get in touch.</h2>
+      <div style="display:flex;flex-direction:column;gap:14px;align-items:flex-start">
+        <a href="mailto:ndesai@aretian.com" style="color:#f2f1ec;text-decoration:none;font-size:18px;font-weight:300;border-bottom:1px solid #4d4f46;padding-bottom:4px">ndesai@aretian.com</a>
+        <div style="display:flex;gap:24px;flex-wrap:wrap;margin-top:8px">
+          <a href="https://www.linkedin.com/in/nikhildesai4/" target="_blank" rel="noopener" style="color:#9a9c90;text-decoration:none;font-size:13px;letter-spacing:0.12em;text-transform:uppercase">LinkedIn</a>
+          <a href="https://github.com/NikhilSDesai" target="_blank" rel="noopener" style="color:#9a9c90;text-decoration:none;font-size:13px;letter-spacing:0.12em;text-transform:uppercase">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      projects: [
+        {
+          src: "assets/cdt-map.png",
+          kicker: "Aretian · Live platform",
+          title: "City Digital Twin, Catalunya",
+          description: "Geospatial intelligence platform covering 5,143 census sections across Catalunya: housing, economics, mobility and morphometrics in one map. Conducted the data science.",
+          tags: ["Geospatial", "Digital Twin"],
+          link: "https://cdt.cat",
+          cta: "Visit cdt.cat"
+        },
+        {
+          src: "assets/rambla-abm.jpg",
+          kicker: "Aretian × Exea Impact · Live demo",
+          title: "La Rambla Climate Intervention ABM",
+          description: "A pedestrian agent-based model of La Rambla, Barcelona, comparing current conditions with a proposed climate intervention. Agents seek shade during heat events, so extra tree canopy and cooling amenities change where people walk and crowd.",
+          tags: ["Agent-Based Model", "Climate"],
+          link: "https://nikhilsdesai.github.io/abm-barcelona-rambla/",
+          cta: "Run the simulation"
+        },
+        {
+          src: "assets/harvard-mit-network.png",
+          kicker: "Research · Network analysis",
+          title: "Harvard & MIT Research Networks",
+          description: "Mapped co-authorship networks across Harvard and MIT to see how collaboration actually drives research output.",
+          tags: ["Network Science", "Research"],
+          link: "assets/Boston_Networks.pdf",
+          cta: "View the presentation"
+        },
+        {
+          src: "assets/dissertation-thumbnail.png",
+          kicker: "MSc dissertation · Space Syntax Ltd.",
+          title: "Topological Metrics for Retail Density in UK Cities",
+          description: "Categorised UK cities by street-network morphology and tested how far centrality metrics predict retail density, integrating spatial autocorrelation and network entropy across an entire country. Awarded 3rd place at the 2024 Society for Location Analysis Dissertation Awards.",
+          tags: ["Network Science", "Space Syntax"],
+          link: "assets/MSc_Dissertation.pdf",
+          cta: "Read the dissertation"
+        },
+        {
+          src: "assets/capetown-langa.png",
+          kicker: "Norman Foster Institute · Master on Sustainable Cities",
+          title: "Cape Town: Opportunity Hubs",
+          description: "Mapped access to opportunity across Cape Town's transport, employment and racial-segregation geography, then designed Opportunity Hub interventions at metropolitan and neighbourhood scale, piloted in the CBD and Langa.",
+          tags: ["Urban Design", "Mobility"],
+          link: "assets/CapeTown_Report.pdf",
+          cta: "Read the report"
+        },
+        {
+          src: "assets/urbansim-closeness.png",
+          kicker: "GitHub · Jupyter Notebook",
+          title: "UrbanSimulation",
+          description: "Experimentation & resilience analysis of the London Underground Network.",
+          tags: ["Python", "Network Analysis"],
+          link: "https://github.com/NikhilSDesai/UrbanSimulation",
+          cta: "View on GitHub"
+        },
+        {
+          src: "assets/flood-risk-diagram.png",
+          kicker: "GitHub · Jupyter Notebook",
+          title: "Flood Risk Mapping",
+          description: "Uses remote sensing data to develop a flood risk map for Da Nang, Vietnam.",
+          tags: ["Remote Sensing", "GIS"],
+          link: "https://github.com/NikhilSDesai/Flood_Risk_Mapping",
+          cta: "View on GitHub"
+        },
+        {
+          src: "assets/airbnb-calculator.png",
+          kicker: "GitHub · Jupyter Notebook",
+          title: "Predicting Licensure of Vancouver Airbnbs",
+          description: "Machine learning to identify illegal Airbnbs in Vancouver, Canada.",
+          tags: ["Machine Learning", "Python"],
+          link: "https://github.com/NikhilSDesai/Predicting_Licensure_of_Vancouver_Airbnbs",
+          cta: "View on GitHub"
+        },
+        {
+          src: "assets/hackathon-winner.gif",
+          kicker: "Winner · CASA Hackathon 2024",
+          title: "CASA Hackathon 2024",
+          description: "Winning entry at UCL's Centre for Advanced Spatial Analysis hackathon.",
+          tags: ["Spatial Analysis", "Hackathon"],
+          link: "assets/CASAHackathon2024.pdf",
+          cta: "Read the writeup"
+        },
+        {
+          src: "assets/learning-diary.jpg",
+          kicker: "GitHub Pages",
+          title: "Learning Diary",
+          description: "A running record of things learned along the way.",
+          tags: ["Personal"],
+          link: "https://nikhilsdesai.github.io/Learning-Diary/",
+          cta: "View Learning Diary"
+        }
+      ],
+      moreProjects: [
+        {
+          kicker: "GitHub · Jupyter Notebook",
+          title: "Spatial Data Science",
+          description: "Using machine learning to reveal patterns in household energy consumption across the UK.",
+          link: "https://github.com/NikhilSDesai/SpatialDataScience"
+        }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
