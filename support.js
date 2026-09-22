@@ -1619,7 +1619,7 @@
   }
 
   // src/runtime.ts
-  var COMPONENT_DIR = ".";
+  var COMPONENT_DIR = "";
   function createRuntime(doc = document) {
     const registry = createRegistry();
     const pseudoClass = createPseudoSheet(doc);
