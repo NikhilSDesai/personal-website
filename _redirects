@@ -1,6 +1,5 @@
 # Clean URLs (200 = rewrite, so the address bar keeps the pretty path)
 /experience                        /Experience.dc.html                 200
-/projects                          /Projects.dc.html                   200
 /writing                           /Writing.dc.html                    200
 /contact                           /Contact.dc.html                    200
 /writing/dalston                   /The%20Dalston%20Sainsburys.dc.html 200
