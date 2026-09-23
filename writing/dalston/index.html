@@ -1,16 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="/support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
+<title>An Homage to the Dalston Sainsbury's | Nikhil Desai</title>
 <link rel="icon" type="image/png" sizes="256x256" href="/favicon.png?v=2">
 <link rel="apple-touch-icon" href="/favicon.png?v=2">
-
 <link href="/fonts/fonts.css" rel="stylesheet">
 <style>
   body { margin:0; background:#f4f2ee; color:#14150f; font-family:"Libre Franklin", system-ui, sans-serif; -webkit-font-smoothing:antialiased; }
@@ -19,10 +14,25 @@
   a:hover { color:#14150f; }
   ::selection { background:#d8d3c7; }
   :focus-visible { outline:2px solid #1f3d2b; outline-offset:3px; }
+  nav a { color:#4a4b40; }
+  nav a[aria-current="page"] { color:#14150f; border-bottom:1px solid #14150f; }
 </style>
-</helmet>
+</head>
+<body>
 <div style="background:#f4f2ee;min-height:100vh">
-  <dc-import name="Nav" current="writing" hint-size="100%,60px"></dc-import>
+
+  <!-- Navigation -->
+  <div style="border-bottom:1px solid #d8d3c7;background:#f4f2ee;position:sticky;top:0;z-index:20">
+    <div style="max-width:1200px;margin:0 auto;padding:18px 32px;display:flex;align-items:baseline;justify-content:space-between;gap:24px;flex-wrap:wrap">
+      <a href="/" style="text-decoration:none;color:#14150f;font-size:15px;letter-spacing:0.16em;text-transform:uppercase;font-weight:400">Nikhil Desai</a>
+      <nav style="display:flex;gap:28px;flex-wrap:wrap">
+        <a href="/" style="text-decoration:none;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;padding-bottom:2px">Home</a>
+        <a href="/experience" style="text-decoration:none;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;padding-bottom:2px">Experience</a>
+        <a href="/writing" aria-current="page" style="text-decoration:none;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;padding-bottom:2px">Writing</a>
+        <a href="/contact" style="text-decoration:none;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;padding-bottom:2px">Contact</a>
+      </nav>
+    </div>
+  </div>
 
   <header style="max-width:800px;margin:0 auto;padding:112px 40px 48px;text-align:left">
     <a href="/writing" style="display:inline-block;font-size:13px;text-transform:uppercase;letter-spacing:0.12em;color:#1f3d2b;text-decoration:none;margin-bottom:24px;border-bottom:1px solid #a9ab99;padding-bottom:3px">&larr; Writing</a>
@@ -103,6 +113,5 @@
     </div>
   </section>
 </div>
-</x-dc>
 </body>
 </html>

@@ -1,29 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="/support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
+<title>Contact | Nikhil Desai</title>
 <link rel="icon" type="image/png" sizes="256x256" href="/favicon.png?v=2">
 <link rel="apple-touch-icon" href="/favicon.png?v=2">
-
 <link href="/fonts/fonts.css" rel="stylesheet">
 <style>
-  body { margin:0; background:#111210; color:#f2f1ec; --nav-bg:#111210; --nav-rule:#2c2e28; --nav-ink:#f2f1ec; --nav-dim:#9a9c90; font-family:"Libre Franklin", system-ui, sans-serif; -webkit-font-smoothing:antialiased; }
+  body { margin:0; background:#111210; color:#f2f1ec; font-family:"Libre Franklin", system-ui, sans-serif; -webkit-font-smoothing:antialiased; }
   h1,h2,h3,p { margin:0; }
   a { color:#dfe3d6; }
   a:hover { color:#ffffff; }
   ::selection { background:#33352a; }
   :focus-visible { outline:2px solid #dfe3d6; outline-offset:3px; }
+  nav a { color:#9a9c90; }
+  nav a[aria-current="page"] { color:#f2f1ec; border-bottom:1px solid #f2f1ec; }
 </style>
-</helmet>
-
+</head>
+<body>
 <div style="background:#111210;min-height:100vh;display:flex;flex-direction:column">
-  <dc-import name="Nav" current="contact" hint-size="100%,60px"></dc-import>
+
+  <!-- Navigation -->
+  <div style="border-bottom:1px solid #2c2e28;background:#111210;position:sticky;top:0;z-index:20">
+    <div style="max-width:1200px;margin:0 auto;padding:18px 32px;display:flex;align-items:baseline;justify-content:space-between;gap:24px;flex-wrap:wrap">
+      <a href="/" style="text-decoration:none;color:#f2f1ec;font-size:15px;letter-spacing:0.16em;text-transform:uppercase;font-weight:400">Nikhil Desai</a>
+      <nav style="display:flex;gap:28px;flex-wrap:wrap">
+        <a href="/" style="text-decoration:none;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;padding-bottom:2px">Home</a>
+        <a href="/experience" style="text-decoration:none;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;padding-bottom:2px">Experience</a>
+        <a href="/writing" style="text-decoration:none;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;padding-bottom:2px">Writing</a>
+        <a href="/contact" aria-current="page" style="text-decoration:none;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;padding-bottom:2px">Contact</a>
+      </nav>
+    </div>
+  </div>
 
   <section style="max-width:1200px;margin:0 auto;padding:88px 32px 96px;width:100%;flex:1">
     <div style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#8d8f83;margin-bottom:20px">Contact</div>
@@ -50,6 +59,5 @@
 
   <footer style="max-width:1200px;margin:0 auto;padding:32px;width:100%;border-top:1px solid #2c2e28;font-size:13px;color:#8d8f83">Nikhil Desai &middot; London</footer>
 </div>
-</x-dc>
 </body>
 </html>

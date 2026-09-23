@@ -1,50 +1,130 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="/support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
+<title>Experience | Nikhil Desai</title>
 <link rel="icon" type="image/png" sizes="256x256" href="/favicon.png?v=2">
 <link rel="apple-touch-icon" href="/favicon.png?v=2">
-
 <link href="/fonts/fonts.css" rel="stylesheet">
 <style>
-  body { margin:0; background:#111210; color:#f2f1ec; --nav-bg:#111210; --nav-rule:#2c2e28; --nav-ink:#f2f1ec; --nav-dim:#9a9c90; font-family:"Libre Franklin", system-ui, sans-serif; -webkit-font-smoothing:antialiased; }
+  body { margin:0; background:#111210; color:#f2f1ec; font-family:"Libre Franklin", system-ui, sans-serif; -webkit-font-smoothing:antialiased; }
   h1,h2,h3,p { margin:0; }
   a { color:#dfe3d6; }
   a:hover { color:#ffffff; }
   ::selection { background:#33352a; }
   :focus-visible { outline:2px solid #dfe3d6; outline-offset:3px; }
+  nav a { color:#9a9c90; }
+  nav a[aria-current="page"] { color:#f2f1ec; border-bottom:1px solid #f2f1ec; }
 </style>
-</helmet>
-
+</head>
+<body>
 <div style="background:#111210;min-height:100vh">
-  <dc-import name="Nav" current="experience" hint-size="100%,60px"></dc-import>
+
+  <!-- Navigation -->
+  <div style="border-bottom:1px solid #2c2e28;background:#111210;position:sticky;top:0;z-index:20">
+    <div style="max-width:1200px;margin:0 auto;padding:18px 32px;display:flex;align-items:baseline;justify-content:space-between;gap:24px;flex-wrap:wrap">
+      <a href="/" style="text-decoration:none;color:#f2f1ec;font-size:15px;letter-spacing:0.16em;text-transform:uppercase;font-weight:400">Nikhil Desai</a>
+      <nav style="display:flex;gap:28px;flex-wrap:wrap">
+        <a href="/" style="text-decoration:none;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;padding-bottom:2px">Home</a>
+        <a href="/experience" aria-current="page" style="text-decoration:none;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;padding-bottom:2px">Experience</a>
+        <a href="/writing" style="text-decoration:none;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;padding-bottom:2px">Writing</a>
+        <a href="/contact" style="text-decoration:none;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;padding-bottom:2px">Contact</a>
+      </nav>
+    </div>
+  </div>
 
   <header style="max-width:1200px;margin:0 auto;padding:88px 32px 56px">
     <div style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#8d8f83;margin-bottom:20px">Experience</div>
-    <h1 style="font-size:clamp(20px,2.4vw,30px);font-weight:300;line-height:1.3;letter-spacing:-0.01em;max-width:680px;text-wrap:pretty">Urban analytics, research and consulting roles from 2018 to today.</h1>
+    <h1 style="font-size:clamp(20px,2.4vw,30px);font-weight:300;line-height:1.3;letter-spacing:-0.01em;max-width:680px">Urban analytics, research and consulting roles from 2018 to today.</h1>
     <a href="/assets/NikhilDesaiResume.pdf" target="_blank" rel="noopener" style="display:inline-block;margin-top:28px;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;border:1px solid #6f7166;padding:13px 30px">Download CV</a>
   </header>
 
   <section style="max-width:1200px;margin:0 auto;padding:0 32px 96px">
-    <sc-for list="{{ experience }}" as="job" hint-placeholder-count="7">
-      <div style="border-top:1px solid #2c2e28;padding:32px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px;align-items:start">
-        <div>
-          <div style="font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#8d8f83">{{ job.dates }}</div>
-          <div style="font-size:17px;font-weight:400;margin-top:10px">{{ job.company }}</div>
-          <div style="font-size:14px;font-weight:300;color:#8d8f83;margin-top:4px">{{ job.location }}</div>
-        </div>
-        <div style="max-width:620px">
-          <h2 style="font-size:clamp(19px,1.8vw,25px);font-weight:300;line-height:1.28;text-wrap:pretty">{{ job.role }}</h2>
-          <p style="font-size:16px;font-weight:300;line-height:1.66;color:#c2c4b8;margin-top:14px;text-wrap:pretty">{{ job.description }}</p>
-        </div>
+
+    <div style="border-top:1px solid #2c2e28;padding:32px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px;align-items:start">
+      <div>
+        <div style="font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#8d8f83">Nov 2025 – Present</div>
+        <div style="font-size:17px;font-weight:400;margin-top:10px">Aretian Urban Analytics</div>
+        <div style="font-size:14px;font-weight:300;color:#8d8f83;margin-top:4px">London, UK</div>
       </div>
-    </sc-for>
+      <div style="max-width:620px">
+        <h2 style="font-size:clamp(19px,1.8vw,25px);font-weight:300;line-height:1.28">Senior Data Scientist & Software Developer</h2>
+        <p style="font-size:16px;font-weight:300;line-height:1.66;color:#c2c4b8;margin-top:14px">Building digital twins of entire cities, including a climate model for Barcelona that scores every corner of the region for heat and flood risk.</p>
+      </div>
+    </div>
+
+    <div style="border-top:1px solid #2c2e28;padding:32px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px;align-items:start">
+      <div>
+        <div style="font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#8d8f83">Apr 2026 – Present</div>
+        <div style="font-size:17px;font-weight:400;margin-top:10px">University of Oxford</div>
+        <div style="font-size:14px;font-weight:300;color:#8d8f83;margin-top:4px">Oxford, UK</div>
+      </div>
+      <div style="max-width:620px">
+        <h2 style="font-size:clamp(19px,1.8vw,25px);font-weight:300;line-height:1.28">Volunteer Researcher, Inst. for New Economic Thinking</h2>
+        <p style="font-size:16px;font-weight:300;line-height:1.66;color:#c2c4b8;margin-top:14px">Working out how fast the cost of clean technology will fall, so the UK can plan its climate policy around realistic numbers.</p>
+      </div>
+    </div>
+
+    <div style="border-top:1px solid #2c2e28;padding:32px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px;align-items:start">
+      <div>
+        <div style="font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#8d8f83">Jan 2025 – Dec 2025</div>
+        <div style="font-size:17px;font-weight:400;margin-top:10px">Norman Foster Institute</div>
+        <div style="font-size:14px;font-weight:300;color:#8d8f83;margin-top:4px">Madrid, Spain</div>
+      </div>
+      <div style="max-width:620px">
+        <h2 style="font-size:clamp(19px,1.8vw,25px);font-weight:300;line-height:1.28">Data Scientist</h2>
+        <p style="font-size:16px;font-weight:300;line-height:1.66;color:#c2c4b8;margin-top:14px">Won a €52,000 grant to study sustainable growth in Cape Town, and built models that identify where the city has room to add housing and how well its public spaces work.</p>
+      </div>
+    </div>
+
+    <div style="border-top:1px solid #2c2e28;padding:32px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px;align-items:start">
+      <div>
+        <div style="font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#8d8f83">Apr 2024 – Sept 2024</div>
+        <div style="font-size:17px;font-weight:400;margin-top:10px">Space Syntax Ltd.</div>
+        <div style="font-size:14px;font-weight:300;color:#8d8f83;margin-top:4px">London, UK</div>
+      </div>
+      <div style="max-width:620px">
+        <h2 style="font-size:clamp(19px,1.8vw,25px);font-weight:300;line-height:1.28">Data Science Researcher</h2>
+        <p style="font-size:16px;font-weight:300;line-height:1.66;color:#c2c4b8;margin-top:14px">Wrote a research paper showing how the shape of a city's streets predicts where its shops and businesses cluster, work strong enough to earn a full-time job offer.</p>
+      </div>
+    </div>
+
+    <div style="border-top:1px solid #2c2e28;padding:32px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px;align-items:start">
+      <div>
+        <div style="font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#8d8f83">Mar 2021 – Aug 2023</div>
+        <div style="font-size:17px;font-weight:400;margin-top:10px">Baringa Partners</div>
+        <div style="font-size:14px;font-weight:300;color:#8d8f83;margin-top:4px">London, UK</div>
+      </div>
+      <div style="max-width:620px">
+        <h2 style="font-size:clamp(19px,1.8vw,25px);font-weight:300;line-height:1.28">Management Consultant (Data & Analytics)</h2>
+        <p style="font-size:16px;font-weight:300;line-height:1.66;color:#c2c4b8;margin-top:14px">Pushing the limits of Excel</p>
+      </div>
+    </div>
+
+    <div style="border-top:1px solid #2c2e28;padding:32px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px;align-items:start">
+      <div>
+        <div style="font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#8d8f83">Sept 2020 – Mar 2021</div>
+        <div style="font-size:17px;font-weight:400;margin-top:10px">Q5 Partners</div>
+        <div style="font-size:14px;font-weight:300;color:#8d8f83;margin-top:4px">London, UK</div>
+      </div>
+      <div style="max-width:620px">
+        <h2 style="font-size:clamp(19px,1.8vw,25px);font-weight:300;line-height:1.28">Management Consultant (Intern)</h2>
+        <p style="font-size:16px;font-weight:300;line-height:1.66;color:#c2c4b8;margin-top:14px">Worked on a restructuring and organisational design project for National Grid, a utilities company with £14bn in annual revenue.</p>
+      </div>
+    </div>
+
+    <div style="border-top:1px solid #2c2e28;padding:32px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px;align-items:start">
+      <div>
+        <div style="font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#8d8f83">Sept 2018 – Oct 2019</div>
+        <div style="font-size:17px;font-weight:400;margin-top:10px">Boston Consulting Group</div>
+        <div style="font-size:14px;font-weight:300;color:#8d8f83;margin-top:4px">London, UK</div>
+      </div>
+      <div style="max-width:620px">
+        <h2 style="font-size:clamp(19px,1.8vw,25px);font-weight:300;line-height:1.28">Mobility Analyst</h2>
+        <p style="font-size:16px;font-weight:300;line-height:1.66;color:#c2c4b8;margin-top:14px">Researched how self-driving cars and smart city technology could change the way people get around.</p>
+      </div>
+    </div>
 
     <div style="border-top:1px solid #2c2e28;padding-top:36px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px">
       <div>
@@ -53,11 +133,11 @@
       <div style="display:flex;flex-direction:column;gap:24px;max-width:620px">
         <div>
           <div style="font-size:17px;font-weight:400">M.Sc Spatial Data Science, Distinction</div>
-          <p style="font-size:15px;font-weight:300;line-height:1.6;color:#a8aa9e;margin-top:6px">University College London &middot; 2023&ndash;2024</p>
+          <p style="font-size:15px;font-weight:300;line-height:1.6;color:#a8aa9e;margin-top:6px">University College London &middot; 2023–2024</p>
         </div>
         <div>
           <div style="font-size:17px;font-weight:400">M.A (Hons) Economics, First Class</div>
-          <p style="font-size:15px;font-weight:300;line-height:1.6;color:#a8aa9e;margin-top:6px">University of Edinburgh &middot; 2016&ndash;2020</p>
+          <p style="font-size:15px;font-weight:300;line-height:1.6;color:#a8aa9e;margin-top:6px">University of Edinburgh &middot; 2016–2020</p>
         </div>
       </div>
     </div>
@@ -65,7 +145,7 @@
 
   <section style="border-top:1px solid #2c2e28">
     <div style="max-width:1200px;margin:0 auto;padding:88px 32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:48px;align-items:end">
-      <h2 style="font-size:clamp(26px,3vw,38px);font-weight:300;line-height:1.2;letter-spacing:-0.01em;max-width:600px;text-wrap:pretty">Working on cities, climate or spatial data? Get in touch.</h2>
+      <h2 style="font-size:clamp(26px,3vw,38px);font-weight:300;line-height:1.2;letter-spacing:-0.01em;max-width:600px">Working on cities, climate or spatial data? Get in touch.</h2>
       <div style="display:flex;flex-direction:column;gap:14px;align-items:flex-start">
         <a href="mailto:ndesai.career@gmail.com" style="color:#f2f1ec;text-decoration:none;font-size:18px;font-weight:300;border-bottom:1px solid #4d4f46;padding-bottom:4px">ndesai.career@gmail.com</a>
         <div style="display:flex;gap:24px;flex-wrap:wrap;margin-top:8px">
@@ -76,65 +156,5 @@
     </div>
   </section>
 </div>
-</x-dc>
-<script type="text/x-dc" data-dc-script>
-class Component extends DCLogic {
-  renderVals() {
-    return {
-      experience: [
-        {
-          role: "Senior Data Scientist & Software Developer",
-          company: "Aretian Urban Analytics",
-          location: "London, UK",
-          dates: "Nov 2025 – Present",
-          description: "Building digital twins of entire cities, including a climate model for Barcelona that scores every corner of the region for heat and flood risk."
-        },
-        {
-          role: "Volunteer Researcher, Inst. for New Economic Thinking",
-          company: "University of Oxford",
-          location: "Oxford, UK",
-          dates: "Apr 2026 – Present",
-          description: "Working out how fast the cost of clean technology will fall, so the UK can plan its climate policy around realistic numbers."
-        },
-        {
-          role: "Data Scientist",
-          company: "Norman Foster Institute",
-          location: "Madrid, Spain",
-          dates: "Jan 2025 – Dec 2025",
-          description: "Won a €52,000 grant to study sustainable growth in Cape Town, and built models that identify where the city has room to add housing and how well its public spaces work."
-        },
-        {
-          role: "Data Science Researcher",
-          company: "Space Syntax Ltd.",
-          location: "London, UK",
-          dates: "Apr 2024 – Sept 2024",
-          description: "Wrote a research paper showing how the shape of a city's streets predicts where its shops and businesses cluster, work strong enough to earn a full-time job offer."
-        },
-        {
-          role: "Management Consultant (Data & Analytics)",
-          company: "Baringa Partners",
-          location: "London, UK",
-          dates: "Mar 2021 – Aug 2023",
-          description: "Pushing the limits of Excel"
-        },
-        {
-          role: "Management Consultant (Intern)",
-          company: "Q5 Partners",
-          location: "London, UK",
-          dates: "Sept 2020 – Mar 2021",
-          description: "Worked on a restructuring and organisational design project for National Grid, a utilities company with £14bn in annual revenue."
-        },
-        {
-          role: "Mobility Analyst",
-          company: "Boston Consulting Group",
-          location: "London, UK",
-          dates: "Sept 2018 – Oct 2019",
-          description: "Researched how self-driving cars and smart city technology could change the way people get around."
-        }
-      ]
-    };
-  }
-}
-</script>
 </body>
 </html>
