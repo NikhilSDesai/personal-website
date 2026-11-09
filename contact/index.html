@@ -7,6 +7,7 @@
 <link rel="icon" type="image/png" sizes="256x256" href="/favicon.png?v=2">
 <link rel="apple-touch-icon" href="/favicon.png?v=2">
 <link href="/fonts/fonts.css" rel="stylesheet">
+<script src="/city.js"></script>
 <style>
   body { margin:0; background:#000000; color:#f2f1ec; font-family:"Libre Franklin", system-ui, sans-serif; -webkit-font-smoothing:antialiased; }
   h1,h2,h3,p { margin:0; }
@@ -20,11 +21,9 @@
 </head>
 <body>
 <div style="background:#000000;position:relative;isolation:isolate;min-height:100vh;display:flex;flex-direction:column">
-  <div aria-hidden="true" style="position:fixed;inset:0;z-index:-1;pointer-events:none"><script type="module">
-    import { DotField } from '/city.js';
-    const container = document.currentScript.parentElement;
-    new DotField(container, { mode: 'isogrid' });
-  </script></div>
+  <div aria-hidden="true" style="position:fixed;inset:0;z-index:-1;pointer-events:none">
+    <dot-field mode="isogrid"></dot-field>
+  </div>
 
   <!-- Navigation -->
   <div style="border-bottom:1px solid #2c2e28;background:#000000;position:sticky;top:0;z-index:20">
